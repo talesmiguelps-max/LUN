@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="J.A.R.V.I.S. — seu assistente pessoal">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>J.A.R.V.I.S.</title>
+</head>
+<body>
+  <main class="app-shell">
+    <header class="topbar">
+      <div class="brand-mark">J<span>.</span></div>
+      <div class="brand-copy">
+        <div class="brand-name">J.A.R.V.I.S.</div>
+        <div class="brand-subtitle">PERSONAL INTELLIGENCE SYSTEM</div>
+      </div>
+      <div class="status"><i></i><span id="statusText">SISTEMA LOCAL</span></div>
+    </header>
+
+    <section class="hero" aria-label="Estado do assistente">
+      <div class="eyebrow">INTERFACE PRINCIPAL <span>•</span> PROTÓTIPO 0.1</div>
+      <div class="core-wrap" id="coreWrap">
+        <div class="orbit orbit-one"></div>
+        <div class="orbit orbit-two"></div>
+        <div class="core">
+          <div class="core-inner">
+            <div class="core-symbol">J</div>
+            <div class="core-line"></div>
+            <div class="core-label">J.A.R.V.I.S.</div>
+          </div>
+        </div>
+      </div>
+      <h1 id="stateTitle">À sua disposição.</h1>
+      <p id="stateDescription">O núcleo está aguardando uma solicitação.</p>
+      <div class="state-chip"><span class="pulse"></span><span id="stateChipText">AGUARDANDO COMANDO</span></div>
+    </section>
+
+    <section class="conversation" aria-label="Conversa">
+      <div class="section-heading">
+        <span>TERMINAL DE COMUNICAÇÃO</span>
+        <button id="clearButton" class="text-button" type="button">LIMPAR</button>
+      </div>
+      <div id="messages" class="messages" aria-live="polite">
+        <article class="message assistant">
+          <div class="message-label">J.A.R.V.I.S. <span>AGORA</span></div>
+          <p>Olá. Sou seu protótipo de assistente pessoal. Ainda estou operando localmente; a conexão com a inteligência artificial será adicionada em uma próxima etapa.</p>
+        </article>
+      </div>
+      <form id="chatForm" class="composer">
+        <input id="messageInput" type="text" autocomplete="off" placeholder="Digite uma solicitação..." aria-label="Digite uma solicitação">
+        <button class="send-button" type="submit" aria-label="Enviar mensagem">➤</button>
+      </form>
+      <div class="composer-tools">
+        <button id="micButton" class="tool-button" type="button"><span class="mic-icon">●</span> FALAR</button>
+        <button id="voiceButton" class="tool-button active" type="button"><span>◖))</span> VOZ <b id="voiceState">ATIVA</b></button>
+      </div>
+    </section>
+
+    <section class="quick-actions" aria-label="Comandos de demonstração">
+      <div class="section-heading">ATALHOS DE DEMONSTRAÇÃO</div>
+      <div class="action-grid">
+        <button class="action-card" data-command="Que funções você terá?"><span>⌘</span><b>Capacidades</b><small>Conhecer o sistema</small></button>
+        <button class="action-card" data-command="Qual é o estado do projeto?"><span>◈</span><b>Estado do projeto</b><small>Resumo do protótipo</small></button>
+        <button class="action-card" data-command="Como será sua memória?"><span>▤</span><b>Memória</b><small>Planejamento</small></button>
+        <button class="action-card" data-command="Quais são os próximos passos?"><span>↗</span><b>Próximos passos</b><small>Roteiro de evolução</small></button>
+      </div>
+    </section>
+
+    <footer>J.A.R.V.I.S. MOBILE <span>•</span> BUILD 0.1.0 <span>•</span> PROTÓTIPO LOCAL</footer>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
